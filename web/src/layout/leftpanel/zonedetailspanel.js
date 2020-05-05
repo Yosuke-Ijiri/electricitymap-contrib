@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 
 import { dispatch } from '../../store';
-import { useCustomDatetime } from '../../helpers/router';
+import { useCustomDatetime } from '../../hooks/router';
 import { useConditionalZoneHistoryFetch } from '../../hooks/fetch';
 import {
   useCurrentZoneHistoryDatetimes,
