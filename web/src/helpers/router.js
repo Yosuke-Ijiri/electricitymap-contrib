@@ -12,16 +12,6 @@ import { dispatch } from '../store';
 // `useHistory` hook after full migration to React.
 export const history = window.isCordova ? createHashHistory() : createBrowserHistory();
 
-// TODO: Deprecate in favor of <Link /> and <Redirect />
-export function navigateTo({ pathname, search }) {
-  // Push the new URL state to browser history only
-  // if the new URL differs from the current one.
-  const url = `${pathname}${search}`;
-  if (url !== `${history.location.pathname}${history.location.search}`) {
-    history.push(url);
-  }
-}
-
 //
 // Search params
 //
